@@ -12,6 +12,3 @@ class Line(Turtle):
         self.color('white')
         self.left(90)
         self.forward(550)
-
-
-
