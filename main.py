@@ -1,10 +1,9 @@
-from turtle import Turtle, Screen
+from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 from line import Line
 from score import Score
 import time
-
 
 screen = Screen()
 screen.bgcolor('black')
@@ -33,14 +32,7 @@ screen.onkeypress(paddle_right.movement_paddle_down, "Down")
 
 keep = True
 while keep:
-    if score_bot.score_bot <= 5 or score_player.score_player <= 5:
-        time.sleep(0.04)
-    elif score_bot.score_bot <= 10 or score_player.score_player <= 10:
-        time.sleep(0.01)
-    elif score_bot.score_bot <= 15 or score_player.score_player <= 15:
-        time.sleep(0.03)
-    else:
-        time.sleep(0.01)
+    time.sleep(ball.move_ball)
 
     screen.update()
     ball.move()
